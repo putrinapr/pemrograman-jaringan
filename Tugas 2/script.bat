@@ -1,0 +1,5 @@
+start cmd.exe /K "python server.py"
+start cmd.exe /K "cd Client1 && python client.py"
+start cmd.exe /K "cd Client2 && python client.py"
+start cmd.exe /K "cd Client3 && python client.py"
+start cmd.exe /K "cd Client4 && python client.py" 
