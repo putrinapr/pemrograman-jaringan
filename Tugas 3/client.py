@@ -8,6 +8,12 @@ def Main():
 	s.connect((IP, PORT))
 
 	while True:
+		print "Commands:"
+		print "1. list - list files"
+		print "1. <file name> - download file"
+		print "2. <folder>/<file name> - download file in folder"
+		print "3. quit - close app"
+
 		file = raw_input("Input file: ")
 		if file == 'quit':
 			s.close()
@@ -24,8 +30,8 @@ def Main():
 
 	        if data[:6] == 'EXISTS':
 	            filesize = long(data[6:])
-	            message = raw_input("Size of file: " + str(filesize) +"bytes // Download? (Y/N) ")
-	            if message == 'Y':
+	            message = raw_input("Size of file: " + str(filesize) +"bytes // Would you like to download? (Answer: Yes/No) ")
+	            if message == 'Yes':
 	                s.send("OK")
 	                f = open('new_'+file, 'wb')
 	                data = s.recv(1024)
