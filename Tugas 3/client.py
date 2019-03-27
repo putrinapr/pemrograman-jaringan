@@ -14,15 +14,10 @@ def Main():
 		print "3. up <file name> - upload file"
 		print "4. quit - close app"
 
-		file = raw_input("Input file: ")
+		file = raw_input("Input command: ")
 		if file == 'quit':
 			s.close()
 			break
-
-		elif file == 'list':
-			s.send("list")
-			userResponse = s.recv(1024)
-			print str(userResponse)
 
 		else:
 			s.send(file)
