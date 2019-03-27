@@ -9,10 +9,10 @@ def Main():
 
 	while True:
 		print "Commands:"
-		print "1. list - list files"
 		print "1. <file name> - download file"
 		print "2. <folder>/<file name> - download file in folder"
-		print "3. quit - close app"
+		print "3. up <file name> - upload file"
+		print "4. quit - close app"
 
 		file = raw_input("Input file: ")
 		if file == 'quit':

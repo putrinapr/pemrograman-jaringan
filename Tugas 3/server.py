@@ -21,6 +21,24 @@ def RetrFile(name, sock):
 
 		sock.close()
 
+	#elif filename[:2] == 'up':
+        #print "Uploading file..."
+        #uploadResponse = sock.recv(1024)
+        #if uploadResponse[:7] == "SENDING":
+            #f = open('uploaded_' + file[9:], 'wb')
+            #data = sock.recv(1024)
+            #filesize = long(uploadResponse[8:])
+            #totalRecv = len(data)
+            #f.write(data)
+            #while totalRecv < filesize:
+                #data = sock.recv(1024)
+                #totalRecv += len(data)
+                #f.write(data)
+                #print "{0:.2f}".format((totalRecv/float(filesize))*100)+ "% Done"
+
+            #print "Upload Complete!"
+            #f.close()
+
 	else:
 		print "Error"
 
